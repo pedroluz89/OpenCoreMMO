@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
 
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.Collections" Version="$(SystemCollections_Version)" />
-        <PackageReference Include="System.Collections.Immutable" Version="$(SystemCollectionsImmutable_Version)" />
+        <PackageReference Include="System.Collections" Version="4.3.0" />
+        <PackageReference Include="System.Collections.Immutable" Version="7.0.0-rc.1.22426.10" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\src\Data\NeoServer.Data.Providers\NeoServer.Data.Providers.csproj" />

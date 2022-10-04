@@ -1,5 +1,4 @@
-﻿using System.Text;
-using NeoServer.Game.Combat.Attacks;
+﻿using NeoServer.Game.Combat.Attacks;
 using NeoServer.Game.Combat.Calculations;
 using NeoServer.Game.Common.Combat.Structs;
 using NeoServer.Game.Common.Contracts.Creatures;
@@ -10,6 +9,8 @@ using NeoServer.Game.Common.Helpers;
 using NeoServer.Game.Common.Item;
 using NeoServer.Game.Common.Location.Structs;
 using NeoServer.Game.Items.Bases;
+
+using System.Text;
 
 namespace NeoServer.Game.Items.Items.Weapons;
 
@@ -107,8 +108,8 @@ public class DistanceWeapon : Equipment, IDistanceWeapon
                !type.HasFlag(ItemFlag.Stackable);
     }
 
-    private void UseElementalDamage(ICombatActor actor, ICombatActor enemy, ref CombatAttackResult combatResult,
-        ref bool result, IPlayer player, IAmmoEquipment ammo, ref ushort maxDamage, ref CombatAttackValue combat)
+    internal void UseElementalDamage(ICombatActor actor, ICombatActor enemy, scoped ref CombatAttackResult combatResult,
+        scoped ref bool result, IPlayer player, IAmmoEquipment ammo, scoped ref ushort maxDamage, ref CombatAttackValue combat)
     {
         if (!ammo.HasElementalDamage) return;
 
